@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikacja pozwala w łatwy i szybki sposób stworzyć hasło">
+    <meta name="robots" content="all">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Darmowy generator hasła - generuj hasło za darmo</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="passGenerator">
+        <div class="passGenerator__row">
+            <h1 class="row__heading"> Generator hasła </h1>
+
+            <p> Wskazówka: </p>
+            <p> Silne bezpieczne hasło musi zawierać min. 8 znaków, w tym duże litery, małe litery i cyfry</p>
+
+        </div>
+
+        <div class="passGenerator__row">
+
+            <div class="row__parameter">
+                <label for="" class="parameter__ask"> Jak długie ma być Twoje hasło? Wpisz liczbę znaków </label> <input
+                    type="number" class="parameter__passLength">
+            </div>
+
+            <div class="row__parameter">
+                <label for="smallLetters" class="parameter__ask">Małe litery</label>
+                <input type="checkbox" class="parameter__checkbox" id="smallLetters">
+            </div>
+
+            <div class="row__parameter">
+                <label for="bigLetters" class="parameter__ask">Duże litery</label>
+                <input type="checkbox" class="parameter__checkbox" id="bigLetters">
+            </div>
+
+            <div class="row__parameter">
+                <label for="Numbers" class="parameter__ask">Cyfry</label>
+                <input type="checkbox" class="parameter__checkbox" id="numbers">
+            </div>
+
+            <div class="row__parameter">
+                <label for="specialSigns" class="parameter__ask">Znaki spec.</label>
+                <input type="checkbox" class="parameter__checkbox" id="specialSigns">
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <button class="passGenerator__btn">Generuj hasło</button>
+
+
+    </section>
+
+
+    <section class="passList"></section>
+    <script src="script.js"></script>
+</body>
+
+</html>

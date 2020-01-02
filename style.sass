@@ -1,0 +1,176 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto Condensed', sans-serif
+body
+    background-color: rgba(0,0,0,0.9)
+    .passGenerator
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 500px
+        margin: 50px auto
+        .passGenerator__row
+            margin-bottom: 30px
+            width: 100%
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            .row__heading,p
+                flex-basis: 100%
+                text-align: center
+                color: white
+            .row__heading
+                letter-spacing: 10px
+                margin-bottom: 30px
+            p:nth-of-type(1)
+                margin-bottom: 10px
+                text-decoration: underline
+            .row__parameter
+                flex-basis: 20%
+                margin: 5px 0
+                display: flex
+                align-items: center
+                justify-content: center
+                .parameter__ask,.parameter__passLength
+                    text-align: center
+                    color: white
+                .parameter__checkbox
+                    width: 20px
+                    height: 20px
+                    margin-left: 10px
+            .row__parameter:nth-of-type(1)
+                flex-basis: 100%
+                margin: 20px 0 30px
+                flex-wrap: wrap
+                justify-content: center
+                .parameter__passLength
+                    border-radius: 5px
+                    height: 40px
+                    border: none
+                    width: 70px
+                    margin-left: 15px
+                    background-color: transparent
+                    border: 1px solid white
+                    transition: .3s ease
+                    &:focus
+                        box-shadow: 0 0 4px 4px white
+        .passGenerator__btn
+            width: 70vw
+            max-width: 250px
+            border-radius: 5px
+            height: 40px
+            border: none
+            cursor: pointer
+            background-color: transparent
+            border: 1px solid white
+            color: white
+            &:hover
+                box-shadow: 0 0 4px 4px white
+                transition: .3s ease
+    .passList
+        width: 90vw
+        margin: 0 auto
+        .passList__row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: flex-start
+            margin-bottom: 5px
+            .row__pass,.row__mark
+                margin: 2.5px 0
+                flex-basis: 45%
+                height: 40px
+                line-height: 40px
+                font-weight: bold
+                color: white
+                letter-spacing: 5px
+                text-align: center
+                border-radius: 5px
+            .row__pass
+                animation: showPass 1.5s 1 ease
+            .row__mark
+                flex-basis: 25%
+                font-weight: normal
+                font-style: italic
+                opacity: 0
+                animation: showMark 1s 0.25s 1 ease both
+
+@keyframes showPass
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+@keyframes showMark
+    0%
+        transform: translateX(400px)
+        opacity: 0
+    100%
+        transform: translateX(0px)
+        opacity: 1
+
+@media (max-width: 450px)
+    *
+        body
+            .passGenerator
+                .passGenerator__row
+                    .row__parameter
+                        flex-basis: 80%
+                        justify-content: flex-start
+                        .parameter__ask,.parameter__passLength
+                            text-align: center
+                            color: white
+                        .parameter__checkbox
+                            width: 30px
+                            height: 30px
+                    .row__parameter:nth-of-type(1)
+                        flex-basis: 100%
+                        margin: 20px 0
+                        flex-wrap: wrap
+                        justify-content: rentec
+                        .parameter__passLength
+                            border-radius: 5px
+                            height: 40px
+                            border: none
+                            margin-top: 20px
+                            width: 70px
+                            text-align: center
+                            margin-left: 15px
+                            background-color: transparlllt
+                            border: 1px solid white
+
+            .passList
+                .passList__row
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    align-items: center
+                    margin-top: 20px
+                    margin-bottom: 5px
+                    .row__pass,.row__mark
+                        flex-basis: 90%
+                    .row__mark
+                        font-weight: normal
+
+@media (max-width: 350px)
+
+    *
+        body
+            .passList
+                .passList__row
+                .row__pass,.row__mark
+                    margin: 2.5px 0
+                    flex-basis: 90%
+                    height: 40px
+                    line-height: 40px
+                    font-weight: bold
+                    color: white
+                    letter-spacing: 5px
+                    text-align: center
+                    border-radius: 5px
+                .row__mark
+                    flex-basis: 100%
+                    font-weight: normal
